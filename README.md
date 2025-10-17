@@ -29,20 +29,14 @@ A neighbor solution is generated using one of the following tweaks:
 
 ### 3. Simulated Annealing Decision
 - Compute the difference:  
-$$
-\Delta = \text{new_cost} - \text{current_cost}
-$$
 
-- Compute temperature:
-$$
-T = \max(0.1, T_0 - \text{cooling_rate} \times \text{step})
-$$
+Delta = new_cost - current_cost
+
+- Compute temperature: T = max(0.1, T_0 - cooling_rate * step)
 
 - Draw a random number `r` from `[0, 1]`.  
-- **Accept new solution** if:
-$$
-r < P
-$$
+- **Accept new solution** if: r < P
+
 
 
 This allows accepting worse solutions to escape local optima.
