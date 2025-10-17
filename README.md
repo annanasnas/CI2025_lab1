@@ -28,9 +28,7 @@ A neighbor solution is generated using one of the following tweaks:
 - Accept new solution if  `new_cost` >= `current_cost`
 
 ### 3. Simulated Annealing Decision
-- Compute the difference:  
-
-Delta = new_cost - current_cost
+- Compute the difference:  Delta = new_cost - current_cost
 
 - Compute temperature: T = max(0.1, T_0 - cooling_rate * step)
 
@@ -40,12 +38,8 @@ Delta = new_cost - current_cost
 
 
 This allows accepting worse solutions to escape local optima.
-
+ 
 ### 4. Fallback Heuristic
-With probability
-$$
-random(0, 1) < 0.5
-$$
-Check, if the new solution is rejected **and** no remaining items can be added to any knapsack:
+With probability random(0, 1) < 0.5 check, if the new solution is rejected **and** no remaining items can be added to any knapsack:
 - Remove the **least valuable item** from the current solution to free space.  
 - Continue the algorithm with the updated solution.
